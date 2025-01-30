@@ -9,11 +9,11 @@ class ProjectTaskType(models.Model):
     _inherit = "project.task.type"
 
     company_id = fields.Many2one(
-        "res.company",
+        comodel_name="res.company",
         string="Company",
         index=True,
         default=lambda self: self._default_company_id(),
     )
 
     def _default_company_id(self):
-        return self.env.user.company_id
+        return self.env.company

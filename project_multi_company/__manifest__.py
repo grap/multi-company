@@ -6,7 +6,7 @@
     "name": "Project - Multi Company",
     "summary": """
         This module adds support for multi company on Project Module.""",
-    "version": "12.0.1.0.0",
+    "version": "16.0.1.0.0",
     "license": "AGPL-3",
     "author": "GRAP, Odoo Community Association (OCA)",
     "maintainers": ["legalsylvain"],
@@ -15,7 +15,7 @@
     "depends": ["project"],
     "data": [
         "security/ir_rule.xml",
-        "views/view_project_tags.xml",
+        "views/view_project_project_stage.xml",
         "views/view_project_task_type.xml",
     ],
 }

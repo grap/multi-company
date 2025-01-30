@@ -10,8 +10,12 @@
         <field name="model">project.task.type</field>
         <field name="inherit_id" ref="project.task_type_tree" />
         <field name="arch" type="xml">
-            <field name="description" position="after">
-                <field name="company_id" groups="base.group_multi_company" />
+            <field name="fold" position="after">
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    optional="show"
+                />
             </field>
         </field>
     </record>
@@ -20,7 +24,7 @@
         <field name="model">project.task.type</field>
         <field name="inherit_id" ref="project.task_type_edit" />
         <field name="arch" type="xml">
-            <field name="mail_template_id" position="after">
+            <field name="mail_template_id" position="before">
                 <field name="company_id" groups="base.group_multi_company" />
             </field>
         </field>
