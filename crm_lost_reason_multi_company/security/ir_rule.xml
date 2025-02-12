@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright (C) 2025 - Today: Sylvain LE GAL (http://www.grap.coop)
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <record id="crm_lost_reason_company_rule" model="ir.rule">
+        <field name="name">CRM Lost Reason Multi-Company</field>
+        <field name="model_id" ref="crm.model_crm_lost_reason" />
+        <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+
+</odoo>
